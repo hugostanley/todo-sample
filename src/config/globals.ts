@@ -1,3 +1,9 @@
+/*
+ * For environment variables do
+ *
+ * import.meta.env
+ *
+ */
 export const globals = {
   BACKEND_BASE_URL: "http://localhost:4000",
   BE_ENDPOINTS: {},
