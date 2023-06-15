@@ -58,25 +58,27 @@ export default function Login() {
 
   return (
     <div className='w-screen h-screen flex items-center justify-center'>
-      <section className='w-[80%]'>
-        <h1 className='text-4xl font-bold'>Login</h1>
-        <form onSubmit={handleSubmit}>
-          <div className='flex flex-col py-2'>
-            <Label htmlFor='email-login'>Email</Label>
-            <Input id="email-login" type="email" value={loginDetails.email} onChange={e => handleInputOnChange("email", e.target.value)} />
-          </div>
+      <div className='w-[375px]'>
+        <section className='w-[80%]'>
+          <h1 className='text-4xl font-bold'>Login</h1>
+          <form onSubmit={handleSubmit}>
+            <div className='flex flex-col py-2'>
+              <Label htmlFor='email-login'>Email</Label>
+              <Input id="email-login" type="email" value={loginDetails.email} onChange={e => handleInputOnChange("email", e.target.value)} />
+            </div>
 
-          <div className='flex flex-col py-2'>
-            <Label htmlFor='password-login'>Password</Label>
-            <Input id="password-login" type="password" value={loginDetails.password} onChange={e => handleInputOnChange("password", e.target.value)} />
-          </div>
-          <Button type='submit' className='mt-2'>Login</Button>
-        </form>
-        <p className='text-sm italic mt-5'>
-          Don't have an account yet?
-          <Link to={globals.FE_ENDPOINTS.REGISTER} className='text-indigo-700'> Create an account</Link>.
-        </p>
-      </section>
+            <div className='flex flex-col py-2'>
+              <Label htmlFor='password-login'>Password</Label>
+              <Input id="password-login" type="password" value={loginDetails.password} onChange={e => handleInputOnChange("password", e.target.value)} />
+            </div>
+            <Button type='submit' className='mt-2'>Login</Button>
+          </form>
+          <p className='text-sm italic mt-5'>
+            Don't have an account yet?
+            <Link to={globals.FE_ENDPOINTS.REGISTER} className='text-indigo-700'> Create an account</Link>.
+          </p>
+        </section>
+      </div>
     </div>
   )
 }

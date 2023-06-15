@@ -45,28 +45,30 @@ export default function Register() {
 
   return (
     <div className='w-screen h-screen flex items-center justify-center'>
-      <section className='w-[80%]'>
-        <h1 className='text-4xl font-bold'>Register</h1>
-        <form onSubmit={handleSubmit}>
-          <div className='flex flex-col py-2'>
-            <Label htmlFor='username-register'>Username</Label>
-            <Input id='username-register' type="text" value={newUser.username} onChange={e=> handleInputOnChange("username", e.target.value)}/>
-          </div>
-          <div className='flex flex-col py-2'>
-            <Label htmlFor='email-register'>Email</Label>
-            <Input id='email-register' type="email" value={newUser.email} onChange={e=> handleInputOnChange("email", e.target.value)}/>
-          </div>
-          <div className='flex flex-col py-2'>
-            <Label htmlFor='password-register'>Password</Label>
-            <Input id='password-register' type="password" value={newUser.password} onChange={e=> handleInputOnChange("password", e.target.value)}/>
-          </div>
-          <Button type='submit' className='mt-2'>Sign up</Button>
-        </form>
-        <p className='text-sm italic mt-5'>
-          Already have an account?
-          <Link to={globals.FE_ENDPOINTS.LOGIN} className='text-indigo-700'> Login</Link>.
-        </p>
-      </section>
+      <div className='w-[375px]'>
+        <section className='w-[80%]'>
+          <h1 className='text-4xl font-bold'>Register</h1>
+          <form onSubmit={handleSubmit}>
+            <div className='flex flex-col py-2'>
+              <Label htmlFor='username-register'>Username</Label>
+              <Input id='username-register' type="text" value={newUser.username} onChange={e => handleInputOnChange("username", e.target.value)} />
+            </div>
+            <div className='flex flex-col py-2'>
+              <Label htmlFor='email-register'>Email</Label>
+              <Input id='email-register' type="email" value={newUser.email} onChange={e => handleInputOnChange("email", e.target.value)} />
+            </div>
+            <div className='flex flex-col py-2'>
+              <Label htmlFor='password-register'>Password</Label>
+              <Input id='password-register' type="password" value={newUser.password} onChange={e => handleInputOnChange("password", e.target.value)} />
+            </div>
+            <Button type='submit' className='mt-2'>Sign up</Button>
+          </form>
+          <p className='text-sm italic mt-5'>
+            Already have an account?
+            <Link to={globals.FE_ENDPOINTS.LOGIN} className='text-indigo-700'> Login</Link>.
+          </p>
+        </section>
+      </div>
     </div>
   )
 }

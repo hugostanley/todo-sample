@@ -291,8 +291,8 @@ export default function Home() {
   }, [comments])
 
   return (
-    <div>
-      <section>
+    <div className="w-screen h-screen flex justify-center relative">
+      <section className="w-[375px]">
         {!todoList || todoList.length < 1 && (
           <div className="p-6">
             <p className="text-2xl">Please click the add button below and add new todo tasks.</p>
@@ -358,7 +358,7 @@ export default function Home() {
           )
         })}
       </section>
-      <LogOut className="fixed bottom-3 cursor-pointer right-4" onClick={handleSignout} size={30} />
+      <LogOut className="fixed bottom-3 cursor-pointer right-4 lg:right-[35%]" onClick={handleSignout} size={30} />
       <Modal title={"New"} isOpen={isNewTodoModalOpen} handleClose={handleNewTodoModalClose} >
         <form onSubmit={handleSubmit}>
           <div className="flex flex-col py-2">
