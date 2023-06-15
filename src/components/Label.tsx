@@ -1,4 +1,4 @@
-import React, { LabelHTMLAttributes } from 'react'
+import { LabelHTMLAttributes } from 'react'
 
 interface LabelProps extends LabelHTMLAttributes<HTMLLabelElement> {
   children: any;

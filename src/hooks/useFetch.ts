@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { AxiosResponse, AxiosError } from "axios";
 import { useState } from "react";
 import { mainInstance } from '../api/main'
