@@ -4,10 +4,15 @@ import App from './App.tsx'
 import './index.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
+async function getIsLoggedIn() {
+  return JSON.parse(localStorage.getItem("isLoggedIn") || "false")
+}
+
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />
+    element: <App />,
+    loader: getIsLoggedIn
   }
 ])
 
