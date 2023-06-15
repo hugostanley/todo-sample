@@ -1,23 +1,9 @@
-# REACT kickstarter
+# Todo sample
+Sample CRUD todo with comments
 
-A personal solution to kickstart a front end react app.
+## How to run
+1. pnpm install
+2. pnpm run dev
+3. open localhost:5173
 
-### Main dependencies used
-
-- React
-- Tailwind
-- Vite
-- React router
-- Axios
-
-### Features / add ons
-1. Includes a custom useFetch hook for an easier management of API requests and states
-
-### How to use
-1. Clone the repository and install dependencies with pnpm.
-```
-git clone git@github.com:hugostanley/react-starter.git your-repo-name
-pnpm i
-pnpm run dev
-```
 
